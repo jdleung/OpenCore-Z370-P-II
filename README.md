@@ -23,41 +23,41 @@
 
 ### BIOS Settings
 
-Fast Boot: Disabled
-CSM: Disabled
-Vt-x: Enabled
-Above 4G decoding: Enabled
-Execute Disable Bit: Enabled
-OS type: other types
-Advanced \ Chipset Configuration → Vt-d : Disabled
-Advanced \ Super IO Configuration → Serial Port: Disabled
-Advanced \ USB Configuration → XHCI Hand-off : Enabled
+- Fast Boot: Disabled
+- CSM: Disabled
+- Vt-x: Enabled
+- Above 4G decoding: Enabled
+- Execute Disable Bit: Enabled
+- OS type: other types
+- Advanced \ Chipset Configuration → Vt-d : Disabled
+- Advanced \ Super IO Configuration → Serial Port: Disabled
+- Advanced \ USB Configuration → XHCI Hand-off : Enabled
 
 ### ⚠️ Caution
 
 This OC boot loader is migrated from Clover, panics may occur on booting. The following operations can solve my problem
 
 #### Kexts (if any) to be removed from L/E
-AHCI_3rdParty_eSATA.kext
-AHCI_3rdParty_SATA.kext
-AHCI_Intel_Generic_SATA.kext
-FakePCIID_XHCIMux.kext
-FakePCIID.kext
-FakeSMC.kext
-GenericUSBXHCI.kext
-NoVPAJpeg.kext
-NullCPUPowerManagement.kext
+- AHCI_3rdParty_eSATA.kext
+- AHCI_3rdParty_SATA.kext
+- AHCI_Intel_Generic_SATA.kext
+- FakePCIID_XHCIMux.kext
+- FakePCIID.kext
+- FakeSMC.kext
+- GenericUSBXHCI.kext
+- NoVPAJpeg.kext
+- NullCPUPowerManagement.kext
 
-### Clear the cache
+#### Clear the cache
 
-Terminal command: sudo kextcache -i /
-Boot Menu: Reset Nvram
+- Terminal command: sudo kextcache -i /
+- Boot Menu: Reset Nvram
 
 #### Kexts to be replaced with the OpenCore version
-Lilu.kext
-WhateverGreen.kext
-AppleALC.kext
-VirtualSMC.kext
+- Lilu.kext
+- WhateverGreen.kext
+- AppleALC.kext
+- VirtualSMC.kext
 
 
 
