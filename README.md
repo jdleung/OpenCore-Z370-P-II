@@ -1,6 +1,6 @@
 # Opencore(0.5.8) configuration on Asus Z370-P II
 
-![About My Mac](about.png)
+![About My Mac](sysInfo.png)
 
 ### Hardware
 
