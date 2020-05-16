@@ -25,7 +25,7 @@
 ### Settings
 
 ```bash
-pmset -b hibernatemode 0
+
 ```
 
 
