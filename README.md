@@ -53,7 +53,7 @@ This OC boot loader is migrated from Clover, panics may occur on booting. The fo
 - Terminal command: sudo kextcache -i /
 - Boot Menu: Reset Nvram
 
-#### Kexts to be replaced with the OpenCore version
+#### Kexts in L/E to be replaced with the OpenCore version
 - Lilu.kext
 - WhateverGreen.kext
 - AppleALC.kext
