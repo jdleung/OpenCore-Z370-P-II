@@ -23,15 +23,23 @@
 
 ### BIOS Settings
 
-- Fast Boot: Disabled
-- CSM: Disabled
-- Vt-x: Enabled
-- Above 4G decoding: Enabled
-- Execute Disable Bit: Enabled
 - OS type: other types
-- Advanced \ Chipset Configuration → Vt-d : Disabled
-- Advanced \ Super IO Configuration → Serial Port: Disabled
-- Advanced \ USB Configuration → XHCI Hand-off : Enabled
+
+#### Disabled
+
+- Fast Boot
+- CSM
+- Advanced \ Chipset Configuration → Vt-d 
+- Advanced \ Super IO Configuration → Serial Port
+
+#### Enabled
+
+- Vt-x
+- Above 4G decoding
+- Execute Disable Bit
+- Advanced \ USB Configuration → XHCI Hand-off 
+
+
 
 ## ⚠️ Caution
 
@@ -39,26 +47,43 @@ If OpenCore is converted from a using Clover, the following may help you remove 
 
 * [Guidance for converting from Clover to OpenCore](https://github.com/dortania/OpenCore-Desktop-Guide/tree/master/clover-conversion)
 
-#### Removed kexts in L/E (if any)
-`- AHCI_3rdParty_eSATA.kext`
-`- AHCI_3rdParty_SATA.kext`
-`- AHCI_Intel_Generic_SATA.kext`
-`- FakePCIID_XHCIMux.kext`
-`- FakePCIID.kext`
-`- FakeSMC.kext`
-`- GenericUSBXHCI.kext`
-`- NoVPAJpeg.kext`
-`- NullCPUPowerManagement.kext`
 
 #### Clear the cache
 
 `- Terminal command: sudo kextcache -i /`
+
 `- Boot Menu: Reset Nvram`
 
-#### Replace kexts with OpenCore version's
+
+#### Remove kexts in L/E (if any)
+
+`- AHCI_3rdParty_eSATA.kext`
+
+`- AHCI_3rdParty_SATA.kext`
+
+`- AHCI_Intel_Generic_SATA.kext`
+
+`- FakePCIID_XHCIMux.kext`
+
+`- FakePCIID.kext`
+
+`- FakeSMC.kext`
+
+`- GenericUSBXHCI.kext`
+
+`- NoVPAJpeg.kext`
+
+`- NullCPUPowerManagement.kext`
+
+
+#### Replace kexts in L/E with OpenCore version's
+
 `- Lilu.kext`
+
 `- WhateverGreen.kext`
+
 `- AppleALC.kext`
+
 `- VirtualSMC.kext`
 
 
