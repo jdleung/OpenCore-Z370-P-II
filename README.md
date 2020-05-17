@@ -40,54 +40,9 @@
 - Advanced \ USB Configuration → XHCI Hand-off 
 
 
-
-## ⚠️ Caution
+### Misc
 
 If OpenCore is converted from a using Clover, the following may help you remove panic on booting.
 
-* [Guidance for converting from Clover to OpenCore](https://github.com/dortania/OpenCore-Desktop-Guide/tree/master/clover-conversion)
-
-
-#### Clear the cache
-
-`- Terminal command: sudo kextcache -i /`
-
-`- Boot Menu: Reset Nvram`
-
-
-#### Remove kexts in L/E (if any)
-
-`- AHCI_3rdParty_eSATA.kext`
-
-`- AHCI_3rdParty_SATA.kext`
-
-`- AHCI_Intel_Generic_SATA.kext`
-
-`- FakePCIID_XHCIMux.kext`
-
-`- FakePCIID.kext`
-
-`- FakeSMC.kext`
-
-`- GenericUSBXHCI.kext`
-
-`- NoVPAJpeg.kext`
-
-`- NullCPUPowerManagement.kext`
-
-
-#### Replace kexts in L/E with OpenCore version's
-
-`- Lilu.kext`
-
-`- WhateverGreen.kext`
-
-`- AppleALC.kext`
-
-`- VirtualSMC.kext`
-
-
-
-
-
+* [Guidance for converting from Clover to OpenCore](/conversion.md)
 
