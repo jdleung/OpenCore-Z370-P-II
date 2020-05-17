@@ -41,7 +41,5 @@
 
 ### Misc
 
-If OpenCore is converted from a using Clover, the following may help you remove panic on booting.
-
 * [Converting from Clover to OpenCore](/conversion.md)
 
