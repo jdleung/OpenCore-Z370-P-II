@@ -1,4 +1,4 @@
-# Opencore(0.5.8) configuration on Asus Z370-P II
+# Opencore(0.5.8) configuration on Asus Prime Z370-P II
 
 ![About My Mac](sysInfo.png)
 
@@ -20,6 +20,7 @@
 - App Store
 - Time Machine
 
+***
 
 ### BIOS Settings
 
@@ -28,21 +29,19 @@
 #### Disabled
 
 - Fast Boot
-- CSM
-- Advanced \ Chipset Configuration → Vt-d 
-- Advanced \ Super IO Configuration → Serial Port
+- Launch CSM
+- Vt-d 
 
 #### Enabled
 
 - Vt-x
 - Above 4G decoding
-- Execute Disable Bit
-- Advanced \ USB Configuration → XHCI Hand-off 
 
+***
 
 ### Misc
 
 If OpenCore is converted from a using Clover, the following may help you remove panic on booting.
 
-* [Guidance for converting from Clover to OpenCore](/conversion.md)
+* [Converting from Clover to OpenCore](/conversion.md)
 
