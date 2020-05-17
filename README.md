@@ -33,31 +33,33 @@
 - Advanced \ Super IO Configuration → Serial Port: Disabled
 - Advanced \ USB Configuration → XHCI Hand-off : Enabled
 
-### ⚠️ Caution
+## ⚠️ Caution
 
-This OC boot loader is migrated from Clover, panics may occur on booting. The following operations can solve my problem
+If OpenCore is converted from a using Clover, the following may help you remove panic on booting.
 
-#### Kexts (if any) to be removed from L/E
-- AHCI_3rdParty_eSATA.kext
-- AHCI_3rdParty_SATA.kext
-- AHCI_Intel_Generic_SATA.kext
-- FakePCIID_XHCIMux.kext
-- FakePCIID.kext
-- FakeSMC.kext
-- GenericUSBXHCI.kext
-- NoVPAJpeg.kext
-- NullCPUPowerManagement.kext
+* [Guidance for converting from Clover to OpenCore](https://github.com/dortania/OpenCore-Desktop-Guide/tree/master/clover-conversion)
+
+#### Removed kexts in L/E (if any)
+`- AHCI_3rdParty_eSATA.kext`
+`- AHCI_3rdParty_SATA.kext`
+`- AHCI_Intel_Generic_SATA.kext`
+`- FakePCIID_XHCIMux.kext`
+`- FakePCIID.kext`
+`- FakeSMC.kext`
+`- GenericUSBXHCI.kext`
+`- NoVPAJpeg.kext`
+`- NullCPUPowerManagement.kext`
 
 #### Clear the cache
 
-- Terminal command: sudo kextcache -i /
-- Boot Menu: Reset Nvram
+`- Terminal command: sudo kextcache -i /`
+`- Boot Menu: Reset Nvram`
 
-#### Kexts in L/E to be replaced with the OpenCore version
-- Lilu.kext
-- WhateverGreen.kext
-- AppleALC.kext
-- VirtualSMC.kext
+#### Replace kexts with OpenCore version's
+`- Lilu.kext`
+`- WhateverGreen.kext`
+`- AppleALC.kext`
+`- VirtualSMC.kext`
 
 
 
