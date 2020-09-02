@@ -56,7 +56,7 @@
 - Keep RealtekRTL8111.kext in version 2.2.2 ( for my own hardware only )
 - Copy SSDT file(if any) from old folder `ACPI` to new folder `ACPI`
 - Open  `config.plist` , both new and old, in OpenCore Configurator, set the new one same as the old one
-- For safety and testing, the new configuration should run on an USB first
+- For testing in safety, the new configuration should run on a bootable USB first
 
 #### Conversion
 
