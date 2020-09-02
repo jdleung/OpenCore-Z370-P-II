@@ -15,9 +15,8 @@
 				<string>DSDT.aml</string>
 			</dict>
 		</array>
-		<key>Block</key>
-		<array>
-		</array>
+		<key>Delete</key>
+		<array/>
 		<key>Patch</key>
 		<array>
 			<dict>
@@ -154,7 +153,7 @@
 				<data>AQAAAA==</data>
 			</dict>
 		</dict>
-		<key>Block</key>
+		<key>Delete</key>
 		<dict/>
 	</dict>
 	<key>Kernel</key>
@@ -245,7 +244,7 @@
 				<key>BundlePath</key>
 				<string>IntelMausi.kext</string>
 				<key>Comment</key>
-				<string></string>
+				<string>Intel Ethernet LAN</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -452,8 +451,7 @@
 	<key>Misc</key>
 	<dict>
 		<key>BlessOverride</key>
-		<array>
-		</array>
+		<array/>
 		<key>Boot</key>
 		<dict>
 			<key>ConsoleAttributes</key>
@@ -462,8 +460,6 @@
 			<string>Auto</string>
 			<key>HideAuxiliary</key>
 			<false/>
-			<key>HideSelf</key>
-			<true/>
 			<key>PickerAttributes</key>
 			<integer>0</integer>
 			<key>PickerAudioAssist</key>
@@ -483,12 +479,18 @@
 		<dict>
 			<key>AppleDebug</key>
 			<true/>
+			<key>ApplePanic</key>
+			<false/>
 			<key>DisableWatchDog</key>
 			<false/>
 			<key>DisplayDelay</key>
 			<integer>0</integer>
 			<key>DisplayLevel</key>
-			<integer>2147483714</integer>
+			<integer>0</integer>
+			<key>SerialInit</key>
+			<false/>
+			<key>SysReport</key>
+			<false/>
 			<key>Target</key>
 			<integer>3</integer>
 		</dict>
@@ -591,13 +593,15 @@
 				<data>Rg==</data>
 				<key>boot-args</key>
 				<string>darkwake=0 keepsyms=1 debug=0x100 -v</string>
+				<key>run-efi-updater</key>
+				<string>No</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
 				<data>emgtSGFuczoyNTI=</data>
 			</dict>
 		</dict>
-		<key>Block</key>
+		<key>Delete</key>
 		<dict>
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<array>
@@ -684,6 +688,8 @@
 		<dict>
 			<key>EnableJumpstart</key>
 			<true/>
+			<key>GlobalConnect</key>
+			<false/>
 			<key>HideVerbose</key>
 			<true/>
 			<key>JumpstartHotPlug</key>
@@ -718,12 +724,16 @@
 			<string>OpenRuntime.efi</string>
 			<string>#OpenCanopy.efi</string>
 			<string>#AudioDxe.efi</string>
+			<string>#OpenUsbKbDxe.efi</string>
 			<string>#UsbMouseDxe.efi</string>
 			<string>#Ps2KeyboardDxe.efi</string>
 			<string>#Ps2MouseDxe.efi</string>
 			<string>#HiiDatabase.efi</string>
 			<string>#NvmExpressDxe.efi</string>
 			<string>#XhciDxe.efi</string>
+			<string>#ExFatDxe.efi</string>
+			<string>#PartitionDxe.efi</string>
+			<string>#CrScreenshotDxe.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -752,8 +762,6 @@
 			<false/>
 			<key>ConsoleMode</key>
 			<string></string>
-			<key>DirectGopCacheMode</key>
-			<string></string>
 			<key>DirectGopRendering</key>
 			<false/>
 			<key>IgnoreTextInGraphics</key>
@@ -770,6 +778,8 @@
 			<false/>
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
+			<key>UgaPassThrough</key>
+			<false/>
 		</dict>
 		<key>ProtocolOverrides</key>
 		<dict>
@@ -780,6 +790,8 @@
 			<key>AppleDebugLog</key>
 			<false/>
 			<key>AppleEvent</key>
+			<false/>
+			<key>AppleFramebufferInfo</key>
 			<false/>
 			<key>AppleImageConversion</key>
 			<false/>
@@ -806,16 +818,18 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
+			<key>DeduplicateBootOrder</key>
+			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>IgnoreInvalidFlexRatio</key>
 			<true/>
 			<key>ReleaseUsbOwnership</key>
 			<false/>
-			<key>RequestBootVarFallback</key>
-			<false/>
 			<key>RequestBootVarRouting</key>
 			<true/>
+			<key>TscSyncTimeout</key>
+			<integer>0</integer>
 			<key>UnblockFsConnect</key>
 			<false/>
 		</dict>
