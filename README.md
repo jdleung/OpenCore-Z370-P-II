@@ -1,18 +1,12 @@
 # Opencore(0.6.3) configuration on Asus Prime Z370-P II
 
+![System Info](sysInfo.png)
+
 ### Tested macOS
 
 - Big Sur
-
-![Bir Sur](bigSurInfo.png)
-
 - Catalina
-
-![Catalina](catalinaInfo.png)
-
 - Mojave
-
-![Mojave](mojaveInfo.png)
 
 ### Hardware
 
