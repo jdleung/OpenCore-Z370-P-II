@@ -65,9 +65,11 @@
 - Open  `config.plist` , both new and old, in OpenCore Configurator, set the new one same as the old one
 - For testing in safety, the new configuration should run on a bootable USB first
 
-#### Show MacOS installer in boot menu
+#### Release
 
-- Config.plist: Misc, Security, Scan Policy = 0
+Config.plist: Misc -> Debug
+- target=0
+- AppleDebug=No
 
 #### Conversion
 
