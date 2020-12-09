@@ -1,4 +1,4 @@
-# Opencore(0.6.3) configuration on Asus Prime Z370-P II
+# Opencore(0.6.4) configuration on Asus Prime Z370-P II
 
 ![System Info](sysInfo.png)
 
@@ -13,7 +13,8 @@
 - Asus Z370-P II
 - Intel i5 9400F
 - Radeon RX 570 4GB
-- Corsair 3000MHz 8GB * 2
+- Corsair 2133MHz 8GB * 2
+- HIKVISION SSD C2000Pro 512G
 - Intel SSD 250GB
 
 #### Working
