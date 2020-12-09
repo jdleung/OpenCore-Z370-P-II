@@ -955,11 +955,11 @@
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
-			<true/>
+			<false/>
 			<key>MLB</key>
-			<string>C020257004NJG36CB</string>
+			<string>C02930104GUKGQG1H</string>
 			<key>ProcessorType</key>
-			<integer>0</integer>
+			<integer>1541</integer>
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>ROM</key>
@@ -967,11 +967,11 @@
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string>iMac19,1</string>
+			<string>iMac19,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02CWSYHHX87</string>
+			<string>C02Z4HY1JWDW</string>
 			<key>SystemUUID</key>
-			<string>326F9AA1-225A-4F4B-B004-4940F3BC1C20</string>
+			<string>EFC9B323-D781-45BF-A919-6A4CC5CE9623</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
