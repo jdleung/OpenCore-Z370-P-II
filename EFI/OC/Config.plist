@@ -477,13 +477,13 @@
 			<key>CustomSMBIOSGuid</key>
 			<false/>
 			<key>DisableIoMapper</key>
-			<false/>
+			<true/>
 			<key>DisableLinkeditJettison</key>
-			<false/>
+			<true/>
 			<key>DisableRtcChecksum</key>
 			<false/>
 			<key>ExtendBTFeatureFlags</key>
-			<false/>
+			<true/>
 			<key>ExternalDiskIcons</key>
 			<false/>
 			<key>ForceSecureBootScheme</key>
@@ -495,7 +495,7 @@
 			<key>LegacyCommpage</key>
 			<false/>
 			<key>PanicNoKextDump</key>
-			<true/>
+			<false/>
 			<key>PowerTimeoutKernelPanic</key>
 			<true/>
 			<key>ThirdPartyDrives</key>
@@ -740,21 +740,21 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02943108QXKGQGCB</string>
+			<string>C02943108QXKGQGOP</string>
 			<key>ProcessorType</key>
 			<integer>1541</integer>
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>ROM</key>
-			<data>ESIzRFVm</data>
+			<data>ESIzRFUR</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>iMac19,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02ZL01RJWDW</string>
+			<string>C02ZL01RKKGH</string>
 			<key>SystemUUID</key>
-			<string>EC28EFB0-01B4-4940-A256-A538EC1F9BE7</string>
+			<string>EC28EFB0-01B4-4940-A256-A538EC1FAB94</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
