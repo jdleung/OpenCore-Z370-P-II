@@ -19,7 +19,6 @@
 
 #### Working
 
-- Memory XMP
 - Bluetooth, Wi-Fi and ethernet
 - Airdrop
 - Onboard Audio
@@ -38,6 +37,7 @@
 - Fast Boot
 - Launch CSM
 - Vt-d 
+- Memory XMP (cursor may randomly show as video glitches)
 
 #### Enabled
 
