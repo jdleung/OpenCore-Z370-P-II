@@ -37,10 +37,11 @@
 - Fast Boot
 - Launch CSM
 - Vt-d 
-- Memory XMP (cursor may randomly show as video glitches)
+- ~~Memory XMP (cursor may randomly show as video glitches)~~
 
 #### Enabled
 
+- Memory XMP (Adding 3 SSDT files should have fixed video glitches)
 - Vt-x
 - Above 4G decoding
 
