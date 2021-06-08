@@ -70,13 +70,11 @@ Misc -> Debug
 - target=0
 - AppleDebug=No
 
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82
-
 - boot-args: remove `-v`
 
 #### Check OpenCore Version
 
-The version should be display on the top of the boot menu, also you can get it in the terminal (you may need to reset NVRAM in boot menu first)
+The current version should be display on the top of the boot menu, also you can get it in the terminal (you may need to reset NVRAM in boot menu first)
 
 `nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version`
 
