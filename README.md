@@ -1,4 +1,4 @@
-# OpenCore(0.6.4) configuration on Asus Prime Z370-P II
+# OpenCore(0.7.0) configuration on Asus Prime Z370-P II
 
 ![System Info](sysInfo.png)
 
