@@ -5,8 +5,8 @@
 ### Tested macOS
 
 - Big Sur
-- Catalina
-- Mojave
+- Catalina (tested below v0.7.0)
+- Mojave (tested below v0.7.0)
 
 ### Hardware
 
@@ -53,12 +53,12 @@
 
 - Download the latest [OpenCore](https://github.com/acidanthera/OpenCorePkg) and [OpenCore Configurator](https://mackie100projects.altervista.org/)
 - Create a new folder and copy folder `EFI` from the new OpenCore
-- Copy `Sample.plist` from `Docs` to `EFI/OC`, and rename it to `Config.plist`
+- Copy `Sample.plist` from `Docs` to `EFI/OC`, and rename it to `config.plist`
 - Set .efi files in `EFI/OC/Drivers` same as the old one
 - Copy and update drivers in `kexts`: [IntelMausi.kext](https://github.com/acidanthera/IntelMausi), [Lilu.kext](https://github.com/acidanthera/Lilu), [VirtualSMC, SMCProcessor.kext, SMCSupperIO.kext](https://github.com/acidanthera/VirtualSMC), [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen)
-- Keep RealtekRTL8111.kext in version 2.2.2 ( for my own hardware only )
+- ~~Keep RealtekRTL8111.kext in version 2.2.2 ( for my own hardware only )~~
 - Copy SSDT file(if any) from old folder `ACPI` to new folder `ACPI`
-- Open  `Config.plist` , both new and old, in OpenCore Configurator, set the new one same as the old one
+- Open  `config.plist` , both new and old, in OpenCore Configurator, set the new one same as the old one
 - For testing in safety, the new configuration should run on a bootable USB first
 
 #### Release
