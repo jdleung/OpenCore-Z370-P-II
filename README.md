@@ -1,26 +1,35 @@
-# OpenCore(0.7.0) configuration on Asus Prime Z370-P II
+# OpenCore(0.7.6) configuration on Asus Prime Z370-P II
 
 ![System Info](sysInfo.png)
 
-### Tested macOS
+## Tested macOS
 
-- Big Sur
-- Catalina (tested below v0.7.0)
-- Mojave (tested below v0.7.0)
+- Monterey 12.1 (0.7.6)
+- Big Sur 11.6.1 (0.7.6)
+- Big Sur 11.0.1 (0.7.0)
+- Catalina (tested below 0.7.0)
+- Mojave (tested below 0.7.0)
 
-### Hardware
+## Hardware
 
 - Asus Z370-P II
+
 - Intel i5 9400F
+
 - Radeon RX 570 4GB
+
 - Corsair 2133MHz 8GB * 2
+
 - HIKVISION SSD C2000Pro 512G
+
 - Intel SSD 250GB
+
+- BCM943602CS/BCM94360CD BT4.1
 
 #### Working
 
 - Bluetooth, Wi-Fi and ethernet
-- Airdrop
+- Airdrop (some bluetooh cards may fail on macOS 11.3+)
 - Onboard Audio
 - Sleep / Awake
 - App Store
@@ -28,7 +37,7 @@
 
 ***
 
-### BIOS Settings
+## BIOS Settings
 
 - OS type: other types
 
@@ -47,9 +56,20 @@
 
 ***
 
-### Misc
+## Misc
 
-#### Update to new version OpenCore
+### Cannot update to newer versions of Big Sur
+
+```sh
+# Unenroll from beta catalog
+sudo /System/Library/PrivateFrameworks/Seeding.framework/Resources/seedutil unenroll
+# Enroll back in
+sudo /System/Library/PrivateFrameworks/Seeding.framework/Resources/seedutil enroll DeveloperSeed
+```
+
+[Detail Informartion](https://dortania.github.io/OpenCore-Install-Guide/extras/big-sur/#cannot-update-to-newer-versions-of-big-sur)
+
+### Update to new version OpenCore
 
 - Download the latest [OpenCore](https://github.com/acidanthera/OpenCorePkg) and [OpenCore Configurator](https://mackie100projects.altervista.org/)
 - Create a new folder and copy folder `EFI` from the new OpenCore
@@ -61,30 +81,38 @@
 - Open  `config.plist` , both new and old, in OpenCore Configurator, set the new one same as the old one
 - For testing in safety, the new configuration should run on a bootable USB first
 
-#### Release
+### Hide debug information when release
 
-Config.plist
+config.plist
 
-Misc -> Debug
+- Misc
+     - Boot
+         - Check `HideAuxillary`
+     - Debug
+         - target=0
+         - AppleDebug=No
+         - ApplePanic=No
 
-- target=0
-- AppleDebug=No
+- NVRAM
+    - Add
+        - 7C436110-AB2A-4BBB-A880-FE41995C9F82
+            - boot-args: remove `-v`
 
-NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82
-
-- boot-args: remove `-v`
-
-#### Check OpenCore Version
+### Check OpenCore Version
 
 The current version should be displayed on the boot menu screen, also you can get it in the terminal (you may need to reset NVRAM in boot menu first)
 
 `nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version`
 
-#### Set Default Boot Entry
+### Set Default Boot Entry
 
 - Select a boot entry, then `Ctrl` + `Enter`
 
-#### Conversion
+### Show Auxillary on Boot Entry
+
+- Press `space bar` on boot entry screen
+
+### Conversion
 
 * [Converting from Clover to OpenCore](/conversion.md)
 
