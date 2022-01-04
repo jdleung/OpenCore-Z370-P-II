@@ -58,6 +58,10 @@
 
 ## Misc
 
+### Disabled USB Ports
+
+Two USB 2.0 ports at the rear of the motherboard are disabled so as to make the bluetooth works. There are 4 external USB ports and 4 internal USB ports yet on duty. 
+
 ### Cannot update to newer versions of Big Sur
 
 ```sh
