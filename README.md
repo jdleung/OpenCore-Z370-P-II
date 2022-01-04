@@ -29,7 +29,7 @@
 #### Working
 
 - Bluetooth, Wi-Fi and ethernet
-- Airdrop (some bluetooh cards may fail on macOS 11.3+)
+- AirDrop
 - Onboard Audio
 - Sleep / Awake
 - App Store
