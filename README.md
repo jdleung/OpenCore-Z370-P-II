@@ -4,11 +4,15 @@
 
 ## Tested macOS
 
-- Monterey 12.1 (0.7.6)
-- Big Sur 11.6.1 (0.7.6)
-- Big Sur 11.0.1 (0.7.0)
-- Catalina (tested below 0.7.0)
-- Mojave (tested below 0.7.0)
+- 0.7.6 
+    - Monterey 12.1
+    - Big Sur 11.6.1
+- 0.7.0
+    - Big Sur 11.0.1
+    - Mojave
+- 0.5.8 - 0.6.4
+    - Catalina
+    - Mojave
 
 ## Hardware
 
@@ -24,12 +28,13 @@
 
 - Intel SSD 250GB
 
-- BCM943602CS/BCM94360CD BT4.1
+- BCM943602CS / BCM94360CD BT4.1
 
 #### Working
 
 - Bluetooth, Wi-Fi and ethernet
 - AirDrop
+- Handoff
 - Onboard Audio
 - Sleep / Awake
 - App Store
@@ -60,7 +65,7 @@
 
 ### Disabled USB Ports
 
-Two USB 2.0 ports at the rear of the motherboard are disabled so as to make the bluetooth works. There are 4 external USB ports and 4 internal USB ports yet on duty. 
+Two USB 2.0 ports at the rear of the motherboard are disabled so as to make the bluetooth works (you can customize your own USBPorts.kext). There are 4 external USB ports and 4 internal USB ports yet on duty. 
 
 ### Cannot update to newer versions of Big Sur
 
@@ -76,14 +81,14 @@ sudo /System/Library/PrivateFrameworks/Seeding.framework/Resources/seedutil enro
 ### Update to new version OpenCore
 
 - Download the latest [OpenCore](https://github.com/acidanthera/OpenCorePkg) and [OpenCore Configurator](https://mackie100projects.altervista.org/)
-- Create a new folder and copy folder `EFI` from the new OpenCore
+- Create a new folder and copy folder `EFI` from the latest OpenCore
 - Copy `Sample.plist` from `Docs` to `EFI/OC`, and rename it to `config.plist`
 - Set .efi files in `EFI/OC/Drivers` same as the old one
-- Copy and update drivers in `kexts`: [IntelMausi.kext](https://github.com/acidanthera/IntelMausi), [Lilu.kext](https://github.com/acidanthera/Lilu), [VirtualSMC, SMCProcessor.kext, SMCSupperIO.kext](https://github.com/acidanthera/VirtualSMC), [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen), [RealtekRTL8111.kext](https://github.com/Mieze/RTL8111_driver_for_OS_X)
-- ~~Keep RealtekRTL8111.kext in version 2.2.2 ( for my own hardware only )~~
+- Copy and update drivers in `kexts`: [IntelMausi.kext](https://github.com/acidanthera/IntelMausi), [Lilu.kext](https://github.com/acidanthera/Lilu), [VirtualSMC, SMCProcessor.kext, SMCSupperIO.kext](https://github.com/acidanthera/VirtualSMC), [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen), [RealtekRTL8111.kext](https://github.com/Mieze/RTL8111_driver_for_OS_X), [AppleALC.kext](https://github.com/acidanthera/AppleALC), [NVMeFix.kext](https://github.com/acidanthera/NVMeFix)
+- Keep your working USBPorst.kext
 - Copy SSDT file(if any) from old folder `ACPI` to new folder `ACPI`
 - Open  `config.plist` , both new and old, in OpenCore Configurator, set the new one same as the old one
-- For testing in safety, the new configuration should run on a bootable USB first
+- For safety, the new configuration should be tested on a bootable USB first
 
 ### Hide debug information when release
 
@@ -101,6 +106,8 @@ config.plist
     - Add
         - 7C436110-AB2A-4BBB-A880-FE41995C9F82
             - boot-args: remove `-v`
+- PlatformInfo
+    - Generate your own System Serial Number
 
 ### Check OpenCore Version
 
