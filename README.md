@@ -82,28 +82,28 @@ sudo /System/Library/PrivateFrameworks/Seeding.framework/Resources/seedutil enro
 
 1. Download the latest [OpenCore](https://github.com/acidanthera/OpenCorePkg) 
 
-​    /X64/EFI/OC
-- ACPI
-    - Copy SSDT files from the prvious version
-- Drivers
-    - Keep same files as the previous version
-- Kexts (update the following files to the latest version)
-    - [IntelMausi.kext](https://github.com/acidanthera/IntelMausi)
-    - [Lilu.kext](https://github.com/acidanthera/Lilu)
-    - [VirtualSMC.kext, SMCProcessor.kext, SMCSupperIO.kext](https://github.com/acidanthera/VirtualSMC)
-    - [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen)
-    - [RealtekRTL8111.kext](https://github.com/Mieze/RTL8111_driver_for_OS_X)
-    - [AppleALC.kext](https://github.com/acidanthera/AppleALC)
-    - [NVMeFix.kext](https://github.com/acidanthera/NVMeFix)
-    - Copy USBPorts.kext from the previous version
+    /X64/EFI/OC
+    - ACPI
+        - Copy SSDT files from the prvious version
+    - Drivers
+        - Keep same files as the previous version
+    - Kexts (update the following files to the latest version)
+        - [IntelMausi.kext](https://github.com/acidanthera/IntelMausi)
+        - [Lilu.kext](https://github.com/acidanthera/Lilu)
+        - [VirtualSMC.kext, SMCProcessor.kext, SMCSupperIO.kext](https://github.com/acidanthera/VirtualSMC)
+        - [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen)
+        - [RealtekRTL8111.kext](https://github.com/Mieze/RTL8111_driver_for_OS_X)
+        - [AppleALC.kext](https://github.com/acidanthera/AppleALC)
+        - [NVMeFix.kext](https://github.com/acidanthera/NVMeFix)
+        - Copy USBPorts.kext from the previous version
 
 2. Download the latest [OpenCore Configurator](https://mackie100projects.altervista.org/)
 
-​    Open  `config.plist` , both old and new, in OpenCore Configurator, set the new one same as the old one
+    Open  `config.plist` , both old and new, in OpenCore Configurator, set the new one same as the old one
 
 3. Replace the old EFI folder with the new one
 
-​    For safety, the new configuration should be tested on a bootable USB first
+    For safety, the new configuration should be tested on a bootable USB first
 
 ### Hide debug information when release
 
