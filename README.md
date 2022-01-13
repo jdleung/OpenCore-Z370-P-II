@@ -33,7 +33,8 @@
 #### Working
 
 - Bluetooth, Wi-Fi and ethernet
-- AirDrop
+- AirDrop, AirPlay
+- Continuity
 - Handoff
 - Onboard Audio
 - Sleep / Awake
@@ -65,7 +66,11 @@
 
 ### Disabled USB Ports
 
-Two USB 2.0 ports at the rear of the motherboard are disabled so as to make the bluetooth works (you can customize your own USBPorts.kext). There are 4 external USB ports and 4 internal USB ports yet on duty. 
+On 0.7.6+, two USB 2.0 ports at the rear of the motherboard are disabled so as to make the bluetooth works (you can customize your own USBPorts.kext). There are 4 external USB ports and 4 internal USB ports yet on duty. 
+
+![Disabled USB Ports](disabled-usb-ports.png)
+
+
 
 ### Cannot update to newer versions of Big Sur
 
@@ -77,6 +82,8 @@ sudo /System/Library/PrivateFrameworks/Seeding.framework/Resources/seedutil enro
 ```
 
 [Detail Informartion](https://dortania.github.io/OpenCore-Install-Guide/extras/big-sur/#cannot-update-to-newer-versions-of-big-sur)
+
+
 
 ### Update OpenCore to the latest version
 
@@ -99,11 +106,13 @@ sudo /System/Library/PrivateFrameworks/Seeding.framework/Resources/seedutil enro
 
 2. Download the latest [OpenCore Configurator](https://mackie100projects.altervista.org/)
 
-    Open  `config.plist` , both old and new, in OpenCore Configurator, set the new one same as the old one
+    Open  `Docs/Sample.plist` and `config.plist`  in OpenCore Configurator, set the same configurations in `Sample.plist` as `config.plist`
 
 3. Replace the old EFI folder with the new one
 
     For safety, the new configuration should be tested on a bootable USB first
+
+
 
 ### Hide debug information when release
 
@@ -124,19 +133,27 @@ config.plist
 - PlatformInfo
     - Generate your own System Serial Number
 
+
+
 ### Check OpenCore Version
 
 The current version should be displayed on the boot menu screen, also you can get it in the terminal (you may need to reset NVRAM in boot menu first)
 
 `nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version`
 
+
+
 ### Set Default Boot Entry
 
 - Select a boot entry, then `Ctrl` + `Enter`
 
+
+
 ### Show Auxillary on Boot Entry
 
 - Press `space bar` on boot entry screen
+
+
 
 ### Conversion
 
