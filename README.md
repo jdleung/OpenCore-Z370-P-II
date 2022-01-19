@@ -52,7 +52,7 @@
 - Fast Boot
 - Launch CSM
 - Vt-d 
-- ~~Memory XMP (cursor may randomly show as video glitches)~~
+- CFG Lock
 
 #### Enabled
 
@@ -64,9 +64,38 @@
 
 ## Misc
 
+### CPU with Processor Graphics
+The current configuration is for a -F series CPU. If you have an Intel CPU with Processor graphic, add it in config.plist
+
+DeivceProperties
+- Deivce: PciRoot(0x0)/Pci(0x2,0x0)
+- Key: AAPL,ig-platform-id
+- Value: 0300913E
+- Type: Data
+
+
+
+Most device addresses should be `PciRoot(0x0)/Pci(0x2,0x0)`, if not, use [gfxutil](https://github.com/acidanthera/gfxutil) to find it out.
+
+```sh
+gfxutil -f IGPU
+```
+
+
+
+| Value          | Comment                                                      |
+| :------------- | :----------------------------------------------------------- |
+| **`07009B3E`** | Used when the Desktop iGPU is used to drive a display        |
+| **`00009B3E`** | Alternative to `07009B3E` if it doesn't work                 |
+| **`0300913E`** | Used when the Desktop iGPU is only used for computing tasks and doesn't drive a display |
+
+[Details](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#deviceproperties)
+
+
+
 ### Disabled USB Ports
 
-On 0.7.6+, two USB 2.0 ports at the rear of the motherboard are disabled so as to make the bluetooth works (you can customize your own USBPorts.kext). There are 4 external USB ports and 4 internal USB ports yet on duty. 
+On 0.7.6+, two USB 2.0 ports at the rear of the motherboard are disabled so as to make the bluetooth works (you can customize your own USBPorts.kext). 4 external USB ports and 4 internal USB ports are still in use.
 
 ![Disabled USB Ports](disabled-usb-ports.png)
 
@@ -81,7 +110,7 @@ sudo /System/Library/PrivateFrameworks/Seeding.framework/Resources/seedutil unen
 sudo /System/Library/PrivateFrameworks/Seeding.framework/Resources/seedutil enroll DeveloperSeed
 ```
 
-[Detail Informartion](https://dortania.github.io/OpenCore-Install-Guide/extras/big-sur/#cannot-update-to-newer-versions-of-big-sur)
+[Details](https://dortania.github.io/OpenCore-Install-Guide/extras/big-sur/#cannot-update-to-newer-versions-of-big-sur)
 
 
 
@@ -139,7 +168,9 @@ config.plist
 
 The current version should be displayed on the boot menu screen, also you can get it in the terminal (you may need to reset NVRAM in boot menu first)
 
-`nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version`
+```sh
+nvram 4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:opencore-version
+```
 
 
 
