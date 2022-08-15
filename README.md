@@ -65,7 +65,7 @@
 ## Misc
 
 ### CPU with Processor Graphics
-The current configuration is for a -F series CPU. If you have an Intel CPU with Processor graphic, add it in config.plist
+The current configuration is for a -F series CPU. If you have an Intel CPU with Processor graphic, add this in config.plist
 
 DeivceProperties
 - Deivce: PciRoot(0x0)/Pci(0x2,0x0)
@@ -85,9 +85,9 @@ gfxutil -f IGPU
 
 | Value          | Comment                                                      |
 | :------------- | :----------------------------------------------------------- |
-| **`07009B3E`** | Used when the Desktop iGPU is used to drive a display        |
-| **`00009B3E`** | Alternative to `07009B3E` if it doesn't work                 |
-| **`0300913E`** | Used when the Desktop iGPU is only used for computing tasks and doesn't drive a display |
+| 07009B3E | Used when the Desktop iGPU is used to drive a display        |
+| 00009B3E | Alternative to `07009B3E` if it doesn't work                 |
+| 0300913E | Used when the Desktop iGPU is only used for computing tasks and doesn't drive a display |
 
 [Details](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#deviceproperties)
 
