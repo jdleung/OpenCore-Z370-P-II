@@ -136,7 +136,7 @@
 			<key>ResetHwSig</key>
 			<false/>
 			<key>ResetLogoStatus</key>
-			<true/>
+			<false/>
 			<key>SyncTableIds</key>
 			<false/>
 		</dict>
@@ -745,7 +745,7 @@
 			<key>CustomKernel</key>
 			<false/>
 			<key>FuzzyMatch</key>
-			<true/>
+			<false/>
 			<key>KernelArch</key>
 			<string>Auto</string>
 			<key>KernelCache</key>
@@ -761,7 +761,7 @@
 			<key>ConsoleAttributes</key>
 			<integer>0</integer>
 			<key>HibernateMode</key>
-			<string>Auto</string>
+			<string>None</string>
 			<key>HideAuxiliary</key>
 			<true/>
 			<key>LauncherOption</key>
@@ -777,7 +777,7 @@
 			<key>PickerVariant</key>
 			<string>Acidanthera\GoldenGate</string>
 			<key>PollAppleHotKeys</key>
-			<true/>
+			<false/>
 			<key>ShowPicker</key>
 			<true/>
 			<key>TakeoffDelay</key>
@@ -1051,7 +1051,7 @@
 			<key>HideVerbose</key>
 			<true/>
 			<key>JumpstartHotPlug</key>
-			<true/>
+			<false/>
 			<key>MinDate</key>
 			<integer>0</integer>
 			<key>MinVersion</key>
@@ -1228,7 +1228,7 @@
 			<key>DisableSecurityPolicy</key>
 			<false/>
 			<key>EnableVectorAcceleration</key>
-			<true/>
+			<false/>
 			<key>EnableVmx</key>
 			<false/>
 			<key>ExitBootServicesDelay</key>
