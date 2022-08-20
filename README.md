@@ -5,7 +5,7 @@
 ## Tested macOS
 
 - 0.7.6 
-    - Monterey 12.1
+    - Monterey 12.1, 12.5.1
     - Big Sur 11.6.1
 - 0.7.0
     - Big Sur 11.0.1
