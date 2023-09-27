@@ -6,6 +6,7 @@
 
 - 0.9.5 
   - Ventura 13.5.2
+  - Monterey 12.5.1
 - 0.7.6 
   - Monterey 12.1, 12.5.1
   - Big Sur 11.6.1
