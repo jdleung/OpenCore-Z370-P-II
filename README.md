@@ -4,7 +4,13 @@
 
 ## Tested macOS
 
-- 0.9.5 
+- 0.9.5.1
+  - Sonoma 14.0 (need root patch to make wifi works, see below)
+  - Ventura 13.6
+  - Ventura 13.5.2
+  - Monterey 12.5.1
+- 0.9.5   
+  - Ventura 13.6
   - Ventura 13.5.2
   - Monterey 12.5.1
 - 0.7.6 
@@ -59,13 +65,23 @@
 
 #### Enabled
 
-- Memory XMP (Adding 3 SSDT files should have fixed video glitches)
+- Memory XMP
 - Vt-x
 - Above 4G decoding
 
 ***
 
 ## Misc
+
+### Video glitch crash, occationally
+
+If Memory XMP is enabled, try to slow down the memory frequency and reset NVRAM. It might still crash once or twice. In my case, it did not crash for a third time.
+
+### Wifi Network problem on Sonoma
+
+Apple has dropped support for Broadcom Wi-Fi chipset drivers used in pre-2017 Macs.
+
+If you want to make it works, follow this [patch instruction](https://github.com/dortania/OpenCore-Legacy-Patcher/pull/1077#issuecomment-1646934494)
 
 ### CPU with Processor Graphics
 
