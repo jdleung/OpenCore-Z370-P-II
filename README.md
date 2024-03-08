@@ -66,7 +66,7 @@
 #### Enabled
 
 - Memory XMP
-- Vt-x
+- Vt-x (Virtualization Technology)
 - Above 4G decoding
 
 ***
