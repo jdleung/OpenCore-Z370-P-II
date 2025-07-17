@@ -1,9 +1,11 @@
-# OpenCore(0.9.5) configuration on Asus Prime Z370-P II
+# OpenCore(1.0.5) configuration on Asus Prime Z370-P II
 
 ![System Info](sysInfo.png)
 
 ## Tested macOS
 
+- 1.0.5
+  - Sequoia 15.5 (need root patch to make wifi works, see below)
 - 0.9.5.1
   - Sonoma 14.0 (need root patch to make wifi works, see below)
   - Ventura 13.6
@@ -77,7 +79,7 @@
 
 If Memory XMP is enabled, try to slow down the memory frequency and reset NVRAM. It might still crash once or twice. In my case, it did not crash for a third time.
 
-### Wifi Network problem on Sonoma
+### Wifi Network problem
 
 Apple has dropped support for Broadcom Wi-Fi chipset drivers used in pre-2017 Macs.
 
